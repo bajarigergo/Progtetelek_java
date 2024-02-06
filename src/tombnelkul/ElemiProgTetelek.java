@@ -55,6 +55,24 @@ public class ElemiProgTetelek {
             min = szam;}
         db++;
     }
-        System.out.printf("%d számból a legkisebb: %d",(db-1),min);      
+    System.out.printf("%d számból a legkisebb: %d\n",(db-1),min);
+    
+    System.out.print("N=");
+    szam = sc.nextInt();
+    boolean prim;
+    
+    if (szam < 2){
+        prim = false;}
+    else{
+        int i = 2;
+        while(i <= Math.sqrt(szam) && szam % i != 0){
+            i++;
+        }
+        prim = i > Math.sqrt(szam);}
+    
+    if (prim == true){
+        System.out.println("Prím");}
+    else{
+        System.out.println("Nem prím");}
     }
 }
